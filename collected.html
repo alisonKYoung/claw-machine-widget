@@ -6,28 +6,26 @@
     <link rel="stylesheet" media="only screen and (max-width: 400px)" href="game-style-mobile.css" />
     <link rel="stylesheet" media="only screen and (min-width: 401px)" href="game-style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Claw Machine Results</title>
+    <title>Collected</title>
 </head>
 <body>
     <div id="console" class="boxed">
-        <!--- This div exists because something broke at some time and then i spent a few hours trying to fix it and then i gave up -->
-        <!--- Anyway, i have no idea if this bandaid div does anything but you probably shouldn't delete it -->
         <div id="bandaid"></div>
         <!--- If you rename the claw machine, be sure to also copy that name over to the results.html page too -->
         <div id="banner">CLAW GAME</div>
-        <div id="result-window">
-            <div class="content">
-                <img id="result-image" src="" alt="">
-            </div>
+        <div id="collect-window">
+            <h2 id="prize_0" class="collected-item">FROGS ☐</h2>
+            <h2 id="prize_1" class="collected-item">PENGUINS ☐</h2>
+            <h2 id="prize_2" class="collected-item">RACCOONS ☐</h2>
+            <h2 id="prize_3" class="collected-item">POLAR BEARS ☐</h2>
+            <h2 id="prize_4" class="collected-item">SALMON & FRIEND ☐</h2>
+            <h2 id="impossible" class="collected-item">SECRET ANIMAL ☐</h2>
         </div>
         <div>
             <div class="btn boxed" id="give-up">GIVE UP</div>
-            <div class="btn-line">
-                <div class="btn boxed" id="play-again">PLAY AGAIN</div>
-                <div class="btn boxed" id="show-collected">COLLECTION</div>
-            </div>
+            <div class="btn boxed" id="play-again">PLAY AGAIN</div>
         </div>
     </div>
 </body>
-<script src="results.js"></script>
+<script src="collected.js"></script>
 </html>

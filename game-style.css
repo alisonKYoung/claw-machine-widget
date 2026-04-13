@@ -65,10 +65,13 @@
 
 .btn {
     color: black;
-    padding: 10px 30px 10px 30px;
-    width:fit-content;  
+    display: inline-flex;
+    padding: 10px 30px;
+    width:fit-content;
+    text-align: center;  
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
     background-color:  white; /* If you want to make the arrow buttons a different colour*/
 }
 
@@ -78,10 +81,16 @@
     background-color: white; /* If you want to make the play again button a different colour*/
 }
 
-#download {
+#show-collected {
+    margin-left: 10px;
+}
+
+#give-up {
+    padding: 8px 30px 8px 30px;
     opacity: 0;
+    display: flex;
     transition: opacity 1s;
-    background-color: white; /* If you want to make the download button a different colour*/
+    background-color: rgb(255, 137, 137); /* If you want to make the download button a different colour*/
 }
 
 /* EVERYTHING ELSE */
@@ -178,4 +187,21 @@ body {
 #result-image {
     width: 90%;
     padding-top: 8px;
+}
+
+.collected-item {
+    font-size: 18pt;
+    padding: 3px 10px;
+    border: 2px black solid;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+
+#btn-line {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
 }

@@ -1,179 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900');
 
-/* PLACES TO CHANGE COLOURS */
-#console {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white; /* Change the colour of the whole machine */
-    width: 350px;
-    height: 500px;
-    padding: 30px;
-    transform: scale(.7);
-}
-
-.boxed {
-    border: 2px black solid;
-    padding: 15x 20px 15px 20px;
-    background-color: white; /* Change the default colour of the buttons*/
-    border-radius: 10px;
-    box-shadow: 5px 5px 0px black; /* Change the drop shadow on all the elements */
-    margin: 10px;
-}
-
-#banner {
-    width: 100%;
-    text-align: center;
-    font-size: 40pt;
-    font-weight: 900;
-    color: white; /* Change the colour of the machine title text*/
-    border-radius: 10px;
-    padding: 0;
-    -webkit-text-stroke: 4px black; /* Change the outline colour of the machine title text*/
-    paint-order: stroke fill;
-    text-shadow: 5px 5px 0px black; /* Change the drop shadow colour of the machine title text - should probably be the same as the stroke*/
-}
-
-#window {
-    position: relative;
-    background-color: white; /* Change the background colour of the claw machine game window */
-    width: 100%;
-    height: 350px;
-    border: 2px black solid; /* Change the outline colour of the claw machine game window*/
-    padding: 15x 20px 15px 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    transition: 1s;
-}
-
-#claw-block {
-    height: 35px;
-    width: 80px;
-    margin-bottom: 0;
-    margin-top: -25px;
-    z-index: 2;
-    position: relative;
-    background-color: white; /* Change the colour of the block that is on the rope carrying the claw*/
-}
-
-#drop {
-    border-radius: 50px;
-    color: black;
-    font-weight: 700;
-    background-color: white; /* If you want to make the drop button a different colour*/
-}
-
-.btn {
-    color: black;
-    padding: 10px 30px 10px 30px;
-    width:fit-content;  
-    margin-left: auto;
-    margin-right: auto;
-    background-color:  white; /* If you want to make the arrow buttons a different colour*/
-}
-
-#play-again {
-    opacity: 0;
-    transition: opacity 1s;
-    background-color: white; /* If you want to make the play again button a different colour*/
-}
-
-#download {
-    opacity: 0;
-    transition: opacity 1s;
-    background-color: white; /* If you want to make the download button a different colour*/
-}
-
-/* EVERYTHING ELSE */
-
+/* Mobile-first base styles */
 body {
     font-family: 'Rubik', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
-}
-
-#claw {
-    transition: transform 0.5s;
-}
-
-#claw-rail {
-    z-index: 0;
+    margin: 0;
     padding: 0;
-    margin: 25px 0 0 -1px;
-    width: 101%;
-    height: 102%;
-    transform-origin: center center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-#claw-hands {
-    width: 90px;
-    margin-left: -245px;
-    margin-top: -10px;
-    transition: transform .7s;
-    position: relative;
-    transform-origin: top center;
-}
-
-#claw-rope {
-    width: 90px;
-    margin-left: -245px;
-    margin-top: 0;
-    transition: transform .7s;
-    transform-origin: top center;
-}
-
-/* claw machine window content */
-.content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+#console {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    background-color: white;
+    width: 95vw;
+    max-width: 350px;
+    height: 90vh;
+    max-height: 500px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.boxed {
+    border: 2px black solid;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px black;
+    margin: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#banner {
+    width: 100%;
     text-align: center;
+    font-size: 24pt;
+    font-weight: 900;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 0;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 0px black;
 }
 
-#ball-front {
-    width: 96%;
-    margin-bottom: -175px;
-    z-index: 10;
+#window {
     position: relative;
+    background-color: white;
+    width: 100%;
+    height: 60vw;
+    max-height: 300px;
+    border: 2px black solid;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: 1s;
+    box-sizing: border-box;
 }
 
-/* control panel specific styles */
+#claw-block {
+    height: 25px;
+    width: 60px;
+    margin-bottom: 0;
+    margin-top: -20px;
+    z-index: 2;
+    position: relative;
+    background-color: white;
+}
+
+#drop {
+    border-radius: 50px;
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 16pt;
+}
+
+.btn {
+    color: black;
+    display: inline-flex;
+    padding: 8px 20px;
+    width: fit-content;
+    text-align: center;
+    margin: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 16pt;
+}
+
+#play-again {
+    opacity: 0;
+    transition: opacity 1s;
+    background-color: white;
+}
+
+#show-collected {
+    margin-left: 10px;
+}
+
+#give-up {
+    padding: 6px 20px;
+    opacity: 0;
+    display: flex;
+    transition: opacity 1s;
+    background-color: rgb(255, 137, 137);
+    font-size: 16pt;
+}
+
+/* Control panel */
 #controls {
     display: flex;
     flex-direction: row;
-    font-size: 18pt;
+    font-size: 16pt;
     width: 100%;
-    column-gap: 25px;
+    column-gap: 10px;
     justify-content: space-evenly;
     transition: 1s;
+    flex-wrap: wrap;
 }
 
-/* button hover effect */
-@media (hover: hover) {
-    .btn.boxed:hover {
-        transform: translate(5px, 5px);
-        box-shadow: 0px 0px 0px black;
-        transition: transform .1s;
-    }
+/* Button hover effect (for touch devices, use active instead) */
+.btn.boxed:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px black;
+    transition: transform .1s;
 }
 
-/* results page */
-
+/* Results page */
 #result-window {
     position: relative;
     width: 100%;
-    height: 350px;
-    padding: 15x 20px 15px 20px;
+    height: 60vw;
+    max-height: 300px;
+    padding: 10px;
     border-radius: 10px;
     opacity: 0;
     transition: 1s;
     transform: translateY(10px);
     text-align: center;
+    box-sizing: border-box;
 }
 
 #result-image {
@@ -181,8 +153,56 @@ body {
     padding-top: 8px;
 }
 
-/*idk why the console seems to shrink weirdly on the results page so i did this sorry*/
-#bandaid {
-    width: 350px;
-    content: "";
+.collected-item {
+    font-size: 16pt;
+    padding: 3px 10px;
+    border: 2px black solid;
+    margin: 8px 0;
+    border-radius: 10px;
+}
+
+#btn-line {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Claw machine elements */
+#claw {
+    transition: transform 0.5s;
+}
+
+#claw-rail {
+    z-index: 0;
+    padding: 0;
+    margin: 20px 0 0 -1px;
+    width: 101%;
+    height: 102%;
+    transform-origin: center center;
+}
+
+#claw-hands {
+    width: 70px;
+    margin-left: -200px;
+    margin-top: -8px;
+    transition: transform .7s;
+    position: relative;
+    transform-origin: top center;
+}
+
+#claw-rope {
+    width: 70px;
+    margin-left: -200px;
+    margin-top: 0;
+    transition: transform .7s;
+    transform-origin: top center;
+}
+
+#ball-front {
+    width: 96%;
+    margin-bottom: -150px;
+    z-index: 10;
+    position: relative;
 }
