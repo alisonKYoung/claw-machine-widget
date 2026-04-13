@@ -66,10 +66,13 @@
 
 .btn {
     color: black;
-    padding: 10px 30px 10px 30px;
-    width:fit-content;  
+    display: inline-flex;
+    padding: 10px 30px;
+    width:fit-content;
+    text-align: center;  
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
     background-color:  white; /* If you want to make the arrow buttons a different colour*/
 }
 
@@ -79,8 +82,14 @@
     background-color: white; /* If you want to make the play again button a different colour*/
 }
 
+#show-collected {
+    margin-left: 10px;
+}
+
 #give-up {
+    padding: 8px 30px 8px 30px;
     opacity: 0;
+    display: flex;
     transition: opacity 1s;
     background-color: rgb(255, 137, 137); /* If you want to make the download button a different colour*/
 }
@@ -185,4 +194,11 @@ body {
 #bandaid {
     width: 350px;
     content: "";
+}
+#btn-line {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
 }
