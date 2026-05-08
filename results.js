@@ -6,8 +6,8 @@ var result_img_el = document.querySelector("#result-image")
 var collection_el = document.querySelector("#show-collected")
 
 // Pulls the winning result information from the previous page to this one
-var result = sessionStorage.getItem("result")
-var score = sessionStorage.getItem("score")
+var result = localStorage.getItem("result")
+var score = localStorage.getItem("score")
 var gaveUp = false
 
 // this function tells the page to load up with the winning result
@@ -26,7 +26,7 @@ loadPage();
 giveup.addEventListener("click", () => {
     playAgain_el.textContent = score + " TRIES"
     gaveUp = true;
-    sessionStorage.setItem("gaveUp", "true")
+    localStorage.setItem("gaveUp", "true")
 })
 
 // this tells the website to go back to the game page if the user hits the play again button

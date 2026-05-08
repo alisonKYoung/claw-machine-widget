@@ -94,7 +94,7 @@ function selectWinner(spec){
 function raiseClaw(){
     // we select the winner
     result = selectWinner(winningOdds);
-    sessionStorage.setItem(`prize_${result}`, "true")
+    localStorage.setItem(`prize_${result}`, "true")
     console.log(result)
     // we choose a unique ball preview aligned to that winning number
     claw_hands_el.src = `Assets/machine_imgs/ball${result}.svg`
@@ -112,11 +112,11 @@ function raiseClaw(){
 }
 
 function endGame(){
-    var score = parseInt(sessionStorage.getItem("score"))
+    var score = parseInt(localStorage.getItem("score"))
     score++
-    sessionStorage.setItem("score", score);
+    localStorage.setItem("score", score);
     // stores the winning number to the session storage so we can pull it on the results page
-    sessionStorage.setItem("result", result);
+    localStorage.setItem("result", result);
     // takes us to the results page
     window.location.replace("results.html");
 }
